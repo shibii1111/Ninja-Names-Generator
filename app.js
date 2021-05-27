@@ -9,12 +9,6 @@ const app = express();
 app.set('json spaces', 1);
 app.use(cors())
 
-app.use(express.static(__dirname));
-
-app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 app.use('/ninjify', (req, res, next) => {
     const filters = req.query;
     const filteredNinjas = data.filter(ninja =>{
