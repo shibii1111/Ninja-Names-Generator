@@ -22,5 +22,3 @@ app.use('/ninjify', (req, res, next) => {
         res.send(filteredNinjas);
     }
 });
-
-app.listen(3001, () => console.log("app runs"));
